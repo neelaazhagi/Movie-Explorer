@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineSearch</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<style>
+  body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: goldenrod;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  padding: 12px 15px;
+  font-size: 16px;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #222;
+  color:white;
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background-color: goldenrod;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: goldenrod;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.movie-card {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.movie-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+.movie-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.movie-detail {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.movie-detail img {
+  float: left;
+  margin-right: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.movie-detail h2 {
+  margin-top: 0;
+  color:goldenrod;
+}
+
+.movie-detail p {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .movie-detail img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .movie-detail {
+    text-align: center;
+  }
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #facc15; /* warm yellow */
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1.2px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.2);
+}
+
+
+
+
+
+</style>
+<body>
+  <h1 class="title">CineSearch</h1>
+   <p class="subtitle">Discover movies, explore cinema, find your next favourite film.</p>
+  <form>
+    <input type="text" placeholder="Search for a movie..." required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="image-container"></div>
+  <div class="movie-detail"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
